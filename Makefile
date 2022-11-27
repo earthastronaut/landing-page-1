@@ -13,6 +13,9 @@ export VERSION=$(shell git describe --tags)
 # Targets
 # ############################################################################ #
 
+build:
+	docker-compose run --rm dev bash -c 'npm install'
+
 # Clean up build.
 clean:
 	@echo "Clean Build Services"
@@ -35,8 +38,8 @@ stop:
 	docker-compose down
 
 # Start a shell.
-sh: start
-	docker-compose exec dev zsh
+sh:
+	docker-compose run --rm dev zsh
 
 # Print version.
 version:
@@ -55,4 +58,4 @@ help:
 	@echo ""
 
 .DEFAULT_GOAL=help
-.PHONY: clean help sh start stop version
+.PHONY: build clean help sh start stop version
