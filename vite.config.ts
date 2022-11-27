@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite'
 import * as path from 'path'
 import react from '@vitejs/plugin-react'
-import mdx from 'vite-plugin-mdx'
+// import { mdx } from 'vite-plugin-mdx'
 import pages from 'vite-plugin-react-pages'
 
-module.exports = defineConfig({
+// module.exports = 
+export default defineConfig({
   plugins: [
     react(),
-    mdx(),
+    // mdx(),
     pages({
       pagesDir: path.join(__dirname, 'pages'),
     }),
