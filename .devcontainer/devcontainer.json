@@ -3,6 +3,6 @@
 {
   "name": "Landing",
   "dockerComposeFile": ["../docker-compose.yaml"],
-  "service": "landing",
+  "service": "dev",
   "workspaceFolder": "/home/node/app"
 }
